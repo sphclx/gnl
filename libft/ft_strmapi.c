@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmaoi.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenton <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mburl <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/12 17:27:16 by abenton           #+#    #+#             */
-/*   Updated: 2019/09/17 14:49:07 by abenton          ###   ########.fr       */
+/*   Created: 2019/09/04 22:30:30 by mburl             #+#    #+#             */
+/*   Updated: 2019/09/04 22:47:37 by mburl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*res;
 
-	if (!s || !(res = ft_memalloc((size_t)ft_strlen((char*)s) + 1)) || !f)
+	if (!s || !(res = ft_memalloc((size_t)ft_strlen((char*)s) + 1)))
 		return (0);
 	i = 0;
 	while (s[i])

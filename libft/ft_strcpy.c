@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenton <abenton@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mburl <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 17:07:24 by abenton           #+#    #+#             */
-/*   Updated: 2019/10/02 16:40:07 by abenton          ###   ########.fr       */
+/*   Created: 2019/09/04 15:36:20 by mburl             #+#    #+#             */
+/*   Updated: 2019/09/04 17:09:24 by mburl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strcpy(char *dst, const char *src)
 {
-	int i;
+	unsigned int i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		dst[i] = src[i];
-		++i;
+		i++;
 	}
-	dst[i] = '\0';
+	dst[i] = src[i];
 	return (dst);
 }

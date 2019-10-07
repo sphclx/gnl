@@ -3,29 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenton <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mburl <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/12 11:38:29 by abenton           #+#    #+#             */
-/*   Updated: 2019/09/18 11:06:17 by abenton          ###   ########.fr       */
+/*   Created: 2019/09/04 16:23:58 by mburl             #+#    #+#             */
+/*   Updated: 2019/09/13 18:35:28 by mburl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(const char *haystack, const char *needle)
+#include "libft.h"
+
+char	*ft_strstr(const char *str, const char *needle)
 {
 	int i;
 
-	if (!*needle && !*haystack)
-		return ((char *)haystack);
+	if (!*needle && !*str)
+		return ((char *)str);
 	if (!*needle)
-		return ((char *)haystack);
-	while (*haystack)
+		return ((char *)str);
+	while (*str)
 	{
 		i = 0;
-		while (haystack[i] == needle[i] && needle[i])
+		while (str[i] == needle[i] && needle[i])
 			i++;
 		if (!needle[i])
-			return ((char *)haystack);
-		haystack++;
+			return ((char *)str);
+		str++;
 	}
 	return (0);
 }

@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abenton <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: mburl <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/16 12:15:25 by abenton           #+#    #+#             */
-/*   Updated: 2019/09/16 12:38:14 by abenton          ###   ########.fr       */
+/*   Created: 2019/09/04 23:17:40 by mburl             #+#    #+#             */
+/*   Updated: 2019/09/04 23:27:38 by mburl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	ft_putnbr(int n)
 {
@@ -20,7 +21,7 @@ void	ft_putnbr(int n)
 	{
 		if (n < 0)
 		{
-			ft_putchar('-');
+			write(1, "-", 1);
 			n *= -1;
 		}
 		if (n >= 10)
