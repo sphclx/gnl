@@ -24,6 +24,7 @@ int main(void)
 			if (count_lines == 0 && strcmp(line, "1234567") != 0)
 				errors++;
 			count_lines++;
+			free(line);
 		}
 		close(fd);
 	}
